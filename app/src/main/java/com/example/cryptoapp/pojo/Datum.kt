@@ -9,7 +9,4 @@ data class Datum (
     @SerializedName("CoinInfo")
     @Expose
     val coinInfo: CoinInfo? = null
-    //@SerializedName("RAW")
-    //@Expose
-    //val coinPriceInfoJsonObject:JsonObject? = null
 )
