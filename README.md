@@ -7,3 +7,11 @@ Gson,
 Picasso,
 Room,
 Navigation Components
+
+Ссылка на APK версию:
+https://drive.google.com/file/d/19Njr3yWmkx_GNVu5Y7pnjG_V53PT3n99/view?usp=sharing
+
+Если приложение при установке возникнут проблемы, рекомендации:
+1. Перезагрузите телефон
+2. Зайти в PlayMarket -> Play защита -> Отключить
+
