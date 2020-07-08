@@ -17,3 +17,4 @@ https://drive.google.com/file/d/19Njr3yWmkx_GNVu5Y7pnjG_V53PT3n99/view?usp=shari
 Если при установке APK возникнут проблемы, рекомендации:
 1. Перезагрузите телефон
 2. Зайти в PlayMarket -> Play защита -> Отключить
+3. Извлечь SD карты
