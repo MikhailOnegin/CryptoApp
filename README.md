@@ -18,3 +18,5 @@ https://drive.google.com/file/d/19Njr3yWmkx_GNVu5Y7pnjG_V53PT3n99/view?usp=shari
 1. Перезагрузите телефон
 2. Зайти в PlayMarket -> Play защита -> Отключить
 3. Извлечь SD карты
+
+Моя почта: mih.vokhmyanin@yandex.ru
