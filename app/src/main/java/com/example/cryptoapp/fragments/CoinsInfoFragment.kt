@@ -17,11 +17,11 @@ import com.example.cryptoapp.pojo.CoinPriceInfo
 import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.coins_info_fragment.*
 
-class CoinsInfoFragment:Fragment() {
+class CoinsInfoFragment : Fragment() {
 
     private lateinit var viewModel: CoinViewModel
     private lateinit var rVCoins: RecyclerView
-    private lateinit var navC:NavController
+    private lateinit var navC: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,24 +36,26 @@ class CoinsInfoFragment:Fragment() {
         navC = findNavController()
         val adapter = CoinInfoAdapter()
 
-        adapter.onCoinClickListener = object :CoinInfoAdapter.OnCoinClickListener{
+        adapter.onCoinClickListener = object : CoinInfoAdapter.OnCoinClickListener {
             override fun onClickItem(coinPriceInfo: CoinPriceInfo) {
                 super.onClickItem(coinPriceInfo)
                 val bundle = Bundle()
                 bundle.putString(EXTRA_FROM_SYMBOL, coinPriceInfo.fromSymbol)
-                navC.navigate(R.id.action_coins_info_to_full_coin_info,bundle)
+                navC.navigate(R.id.action_coins_info_to_full_coin_info, bundle)
             }
         }
 
         rVCoins.adapter = adapter
 
-        viewModel = ViewModelProvider.AndroidViewModelFactory(requireActivity().application).create(CoinViewModel::class.java)
+        viewModel = ViewModelProvider.AndroidViewModelFactory(requireActivity().application)
+            .create(CoinViewModel::class.java)
 
         viewModel.priceList.observe(viewLifecycleOwner, Observer {
             adapter.coinInfoList = it
         })
     }
-    companion object{
+
+    companion object {
         const val EXTRA_FROM_SYMBOL = "fSym"
     }
 }

@@ -15,15 +15,15 @@ import com.example.cryptoapp.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.full_coins_info_fragment.*
 
-class FullCoinInfoFragment: Fragment() {
+class FullCoinInfoFragment : Fragment() {
 
     private lateinit var viewModel: CoinViewModel
-    private lateinit var iVCoin:ImageView
-    private lateinit var tVCoinName:TextView
-    private lateinit var tVCoinMaxPrice:TextView
-    private lateinit var tVCoinMinPrice:TextView
-    private lateinit var tVCoinLastDeal:TextView
-    private lateinit var tVCoinUpdate:TextView
+    private lateinit var iVCoin: ImageView
+    private lateinit var tVCoinName: TextView
+    private lateinit var tVCoinMaxPrice: TextView
+    private lateinit var tVCoinMinPrice: TextView
+    private lateinit var tVCoinLastDeal: TextView
+    private lateinit var tVCoinUpdate: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,16 +40,15 @@ class FullCoinInfoFragment: Fragment() {
         tVCoinMinPrice = textView__full_coins_info_fragment_min_price
         tVCoinLastDeal = textView_full_coins_info_fragment_last_deal
         tVCoinUpdate = textView_full_coins_info_fragment_update
-        viewModel = ViewModelProvider.AndroidViewModelFactory(requireActivity().application).create(CoinViewModel::class.java)
+        viewModel = ViewModelProvider.AndroidViewModelFactory(requireActivity().application)
+            .create(CoinViewModel::class.java)
 
-        val fromSymbol:String? = arguments?.getString(CoinsInfoFragment.EXTRA_FROM_SYMBOL)
-        if(fromSymbol == null){
+        val fromSymbol: String? = arguments?.getString(CoinsInfoFragment.EXTRA_FROM_SYMBOL)
+        if (fromSymbol == null) {
             activity?.finish()
             return
         }
         viewModel.priceList.observe(viewLifecycleOwner, Observer {
-            Log.i("eeee","Bundle: $fromSymbol")
-            Log.i("eeee","Full fragment: $it")
 
         })
         viewModel.getDetailInfo(fromSymbol).observe(viewLifecycleOwner, Observer {

@@ -39,7 +39,6 @@ class CoinInfoAdapter: RecyclerView.Adapter<CoinInfoAdapter.CoinInfoViewHolder>(
         holder.tVCoinName.text = coin.fromSymbol + " / " + coin.toSymbol
         holder.tVCoinPrice.text = "${coin.price} $"
         holder.tVCoinUpdate.text = "${holder.itemView.context.getString(R.string.date_last_update)}  ${coin.getFormattedTime()}"
-        Log.i("eeee","URL: ${coin.getFullImageUrl()}")
         Picasso.get().load(coin.getFullImageUrl()).into(holder.iVlogoCoin)
         holder.itemView.setOnClickListener{
             val coinPriceInfo = coinInfoList[position]

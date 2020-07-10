@@ -17,4 +17,5 @@ class CoinPriceListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_coin_pice_list)
 
-}}
+    }
+}
