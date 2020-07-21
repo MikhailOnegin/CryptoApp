@@ -10,11 +10,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cryptoapp.CoinViewModel
+import viewModels.CoinViewModel
 import com.example.cryptoapp.R
 import com.example.cryptoapp.adapters.CoinInfoAdapter
 import com.example.cryptoapp.pojo.CoinPriceInfo
-import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.coins_info_fragment.*
 
 class CoinsInfoFragment : Fragment() {
