@@ -16,4 +16,4 @@ https://drive.google.com/file/d/19Njr3yWmkx_GNVu5Y7pnjG_V53PT3n99/view?usp=shari
 
 Почта для связи: mih.vokhmyanin@yandex.ru
 
-Любой отклик о приветствуется
+Любой отклик приветствуется
