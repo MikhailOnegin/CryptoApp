@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import viewModels.CoinViewModel
+import com.example.cryptoapp.viewModels.CoinViewModel
 import com.example.cryptoapp.R
 import com.example.cryptoapp.adapters.CoinInfoAdapter
 import com.example.cryptoapp.pojo.CoinPriceInfo

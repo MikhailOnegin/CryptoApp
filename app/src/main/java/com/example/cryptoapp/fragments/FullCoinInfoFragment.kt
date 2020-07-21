@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import viewModels.CoinViewModel
+import com.example.cryptoapp.viewModels.CoinViewModel
 import com.example.cryptoapp.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.full_coins_info_fragment.*
