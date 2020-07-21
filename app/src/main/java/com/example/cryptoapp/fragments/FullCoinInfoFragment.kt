@@ -60,7 +60,6 @@ class FullCoinInfoFragment : Fragment() {
             tVCoinLastDeal.text = it.lastMarket
             tVCoinUpdate.text = it.getFormattedTime()
 
-
         })
     }
 }

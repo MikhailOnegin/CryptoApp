@@ -11,22 +11,23 @@ import com.example.cryptoapp.pojo.CoinPriceInfo
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_coin_info.view.*
 
-class CoinInfoAdapter: RecyclerView.Adapter<CoinInfoAdapter.CoinInfoViewHolder>() {
+class CoinInfoAdapter : RecyclerView.Adapter<CoinInfoAdapter.CoinInfoViewHolder>() {
 
-    var coinInfoList:List<CoinPriceInfo> = arrayListOf()
-    set(value){
-        field = value
-        notifyDataSetChanged()
-    }
+    var coinInfoList: List<CoinPriceInfo> = arrayListOf()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
-    var onCoinClickListener:OnCoinClickListener? = null
+    var onCoinClickListener: OnCoinClickListener? = null
 
-    interface OnCoinClickListener{
-        fun onClickItem(coinPriceInfo: CoinPriceInfo){}
+    interface OnCoinClickListener {
+        fun onClickItem(coinPriceInfo: CoinPriceInfo) {}
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinInfoViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_coin_info, parent, false)
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_coin_info, parent, false)
         return CoinInfoViewHolder(view)
     }
 
@@ -38,15 +39,16 @@ class CoinInfoAdapter: RecyclerView.Adapter<CoinInfoAdapter.CoinInfoViewHolder>(
         val coin = coinInfoList[position]
         holder.tVCoinName.text = coin.fromSymbol + " / " + coin.toSymbol
         holder.tVCoinPrice.text = "${coin.price} $"
-        holder.tVCoinUpdate.text = "${holder.itemView.context.getString(R.string.date_last_update)}  ${coin.getFormattedTime()}"
+        holder.tVCoinUpdate.text =
+            "${holder.itemView.context.getString(R.string.date_last_update)}  ${coin.getFormattedTime()}"
         Picasso.get().load(coin.getFullImageUrl()).into(holder.iVlogoCoin)
-        holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener {
             val coinPriceInfo = coinInfoList[position]
             onCoinClickListener?.onClickItem(coinPriceInfo)
         }
     }
 
-    inner class CoinInfoViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    inner class CoinInfoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val iVlogoCoin = itemView.imageView_logo_coin
         val tVCoinName = itemView.textView_name
         val tVCoinPrice = itemView.textView_price
