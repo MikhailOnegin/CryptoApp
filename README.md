@@ -8,6 +8,7 @@
 - Picasso
 - Room 
 - Navigation Component 
+
 Ссылка на APK версию:
 https://drive.google.com/file/d/19Njr3yWmkx_GNVu5Y7pnjG_V53PT3n99/view?usp=sharing
 
